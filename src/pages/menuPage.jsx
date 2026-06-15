@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BACKEND_URL } from "../constants/constants";
-
+import QRCode from "react-qr-code";
 const CLIENT_ID = "anahuac";
 const RESTAURANT_SLUG = "sample-menu";
 
@@ -177,6 +177,15 @@ function Menu() {
             </div>
           </>
         )}
+        {menu?.slug && (
+  <div className="qr-section">
+   {/*<QRCode
+      value={`https://qr-user-menu.netlify.app/`}
+      size={220}
+    /> */}
+    
+  </div>
+)}
       </div>
   
   );
