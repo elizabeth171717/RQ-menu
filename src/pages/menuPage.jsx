@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { BACKEND_URL } from "../constants/constants";
 import QRCode from "react-qr-code";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faPhone,
+  faClock,
+  faLocationDot,
+  faShareNodes,
+} from "@fortawesome/free-solid-svg-icons";
+
+
 const CLIENT_ID = "anahuac";
 const RESTAURANT_SLUG = "sample-menu";
 
@@ -65,6 +75,26 @@ function Menu() {
               {menu.restaurantName}
             </h1>
 
+<div className="restaurant-info">
+<div className="left-box">
+  <p className="phone">
+    <FontAwesomeIcon icon={faPhone} /> (555) 555-5555
+  </p>
+
+  <p>
+    <FontAwesomeIcon icon={faClock} /> Mon–Fri 8AM–8PM
+  </p>
+  </div>
+<div className="right-box">
+  <p className="location">
+    <FontAwesomeIcon icon={faLocationDot} /> 123 street Atlanta, Georgia 30339
+  </p>
+
+  <button>
+    <FontAwesomeIcon icon={faShareNodes} /> Share Menu
+  </button>
+  </div>
+</div>
             <div className="menu-content">
               {Object.entries(sections).map(
                 ([sectionName, items]) => (

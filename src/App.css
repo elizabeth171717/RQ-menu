@@ -20,6 +20,15 @@
   padding: 1rem;
 }
 
+.restaurant-info{
+  display: flex;
+  padding:.50rem;
+  justify-content: space-between;
+}
+.phone ,.location{
+  margin-bottom: .50rem;
+}
+
 .menu-content{
 
   height: 100%;
