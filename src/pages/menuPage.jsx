@@ -9,7 +9,7 @@ import {
   faLocationDot,
   faShareNodes,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { optimizeImage } from "../utils/optimizeImage"
 
 const CLIENT_ID = "anahuac";
 const RESTAURANT_SLUG = "sample-menu";
@@ -131,12 +131,15 @@ function Menu() {
                             className="option-card"
                           >
                             {item.image && (
-                              <img
-                                src={item.image}
-                                alt={item.name}
-                                className="product-img"
-                              />
-                            )}
+  <div className="product-img-wrapper">
+    <img
+      src={optimizeImage(item.image)}
+      alt={item.name}
+      className="product-img"
+      loading="lazy"
+    />
+  </div>
+)}
 
                             <div className="item-details">
                               {/* ONE PRICE */}
